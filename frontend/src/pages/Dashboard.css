@@ -1,0 +1,225 @@
+:root {
+    --primary-bg: #121212;
+    --secondary-bg: #1c1c1c;
+    --text-color: #ffffff;
+    --highlight-color: #ff5722; /* Bright accent color for highlights */
+    --button-bg: #333333;
+    --button-hover-bg: #ff5722;
+    --card-bg: #1e1e1e;
+    --header-bg: #181818;
+    --footer-bg: #181818;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+  }
+  
+  .dashboard-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .dashboard-container {
+    min-height: 800px;
+    display: flex;
+    flex: 1;
+    background: var(--primary-bg);
+    
+  }
+  
+  .dashboard-sidebar {
+    width: 260px;
+    background: var(--secondary-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    top: 0; /* Keeps the sidebar at the top of the page as you scroll */
+  min-height: 820px; /* Makes the sidebar take full height */
+  overflow-y: auto; /* Ensures that content within the sidebar scrolls if needed */
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .menu button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    padding: 12px 15px;
+    text-align: left;
+    width: 100%;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .menu button.active,
+  .menu button:hover {
+    background: var(--highlight-color);
+    color: var(--text-color);
+  }
+  
+  .dashboard-main {
+    
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .dashboard-header {
+    margin-top: 60px;
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-bg);
+    color: var(--text-color);
+   
+  }
+  
+  .dashboard-content {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: start;
+  }
+  
+  .group-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .group-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .group-card h3 {
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .group-card button {
+    background: var(--button-bg);
+    border: none;
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .group-card button:hover {
+    background: var(--button-hover-bg);
+  }
+  
+  .notes ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .notes li {
+    background: var(--card-bg);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .upload-notes-button {
+    background: var(--highlight-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .upload-notes-button:hover {
+    background: var(--button-hover-bg);
+  }
+  
+  .recent-activity {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  
+  .recent-activity h2 {
+    color: var(--highlight-color);
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  
+  .recent-activity ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .recent-activity li {
+    margin-bottom: 10px;
+  }
+  
+  .quick-links {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .quick-links a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+  
+  .quick-links a:hover {
+    border-color: var(--highlight-color);
+  }
+  
+  .footer {
+    background: var(--footer-bg);
+    padding: 20px;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: auto;
+    
+  }
+  
+  .group-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;      /* Ensures the entire image is visible without cropping */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  .s{
+    margin-top: 20px;
+  }
